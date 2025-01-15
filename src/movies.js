@@ -7,7 +7,7 @@ export default [
         imageUrl: '/static/img/jungle-cruise.jpeg',
         director: 'Jaume Collet-Serra',
         year: '2021',
-        rating: '6.6',
+        rating: 6.6,
         category: 'movie',
     },
     {
@@ -18,7 +18,7 @@ export default [
         imageUrl: 'https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_FMjpg_UX1000_.jpg',
         director: 'Zack Snyder',
         year: '2013',
-        rating: '7.1',
+        rating: 7.1,
         category: 'movie',
     },
     {
@@ -29,7 +29,7 @@ export default [
         director: 'Anthony Russo',
         year: '2019',
         imageUrl: 'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg',
-        rating: '8.4',
+        rating: 8.4,
         description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
     }
 ];
