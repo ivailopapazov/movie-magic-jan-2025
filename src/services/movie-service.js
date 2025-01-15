@@ -6,7 +6,15 @@ export default {
         let result = movies;
 
         if (filter.search) {
-            result = result.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()))
+            result = result.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()));
+        }
+
+        if (filter.genre) {
+            result = result.filter(movie => movie.genre.toLowerCase() === filter.genre);
+        }
+
+        if (filter.year) {
+            result = result.filter(movie => movie.year === filter.year);
         }
 
         return result;
