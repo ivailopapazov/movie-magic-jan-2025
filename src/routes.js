@@ -6,7 +6,7 @@ import movieController from './controllers/movie-controller.js';
 const routes = Router();
 
 routes.use(homeController);
-routes.use(movieController);
+routes.use('/movies', movieController);
 
 routes.get('*', (req, res) => {
     res.render('404');
