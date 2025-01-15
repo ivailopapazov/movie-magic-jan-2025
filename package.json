@@ -1,0 +1,25 @@
+{
+  "name": "movie-magic-jan-2025",
+  "version": "1.0.0",
+  "description": "JS Back-End Course Workshop",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivailopapazov/movie-magic-jan-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ivailopapazov/movie-magic-jan-2025/issues"
+  },
+  "homepage": "https://github.com/ivailopapazov/movie-magic-jan-2025#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
