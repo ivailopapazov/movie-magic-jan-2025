@@ -4,17 +4,20 @@ import movieService from "../services/movie-service.js";
 const movieController = Router();
 
 movieController.get('/create', (req, res) => {
-    res.render('create'); 
+    res.render('create');
+});
+
+movieController.post('/create', (req, res) => {
+    const newMovie = req.body;
+
+    res.end();
 });
 
 movieController.get('/:movieId/details', (req, res) => {
     const movieId = req.params.movieId;
-    
-    // TODO: Get movie data for movieId
     const movie = movieService.findOne(movieId);
-    console.log(movie);
 
-    res.render('details'); 
+    res.render('details', { movie });
 });
 
 export default movieController;
