@@ -1,9 +1,8 @@
-.createSection,
-.editSection {
+.createCastSection {
   background-color: #b5838d;
   margin: auto;
   width: 740px;
-  height: 950px;
+  height: 700px;
   margin-top: 1rem;
   left: 35%;
   text-align: center;
@@ -23,22 +22,19 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-.createForm,
-.editForm {
+.createCastForm {
   width: 720px;
   padding: 10px 0;
   transition: 0.2s;
 }
 
-.createForm > h2,
-.editForm > h2 {
+.createCastForm > h2 {
   font-weight: bold;
   font-size: 27px;
   margin-bottom: 0.8em;
 }
 
-#create-btn,
-#edit-btn {
+#create-btn {
   border: 1px solid black;
   background: #6d6875;
   font-size: 18px;
@@ -49,8 +45,20 @@ input[type=number]::-webkit-outer-spin-button {
   transition: 0.4s;
 }
 
-#create-btn:hover,
-#edit-btn:hover {
+#create-btn:hover {
   background: rgba(20, 20, 20, 0.8);
   padding: 10px 80px;
+}
+
+.info-cast {
+    width: 250px;
+    background: #6D6875;
+    padding: 55px 5px;
+    border-right: 5px solid black;
+}
+
+.info-cast>h2 {
+    padding-top: 10em;
+    font-weight: bold;
+    font-size: 23px;
 }
