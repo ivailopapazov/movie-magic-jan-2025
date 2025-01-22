@@ -9,7 +9,7 @@ const app = express();
 
 // db configuration
 try {
-    const uri = 'mongodb://localhost:27017/magic-movies-jan2025'
+    const uri = 'mongodb://localhost:27017/magic-movies-jan2025';
     await mongoose.connect(uri);
 
     console.log('DB Connected Successfuly!');
