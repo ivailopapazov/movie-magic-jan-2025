@@ -38,20 +38,10 @@ export default {
 
         return result;
     },
-    async attachCast(movieId, castId) {
-
-        // Attach #1
-        // const movie = await Movie.findById(movieId);
-        // if (movie.casts.includes(castId)) {
-        //     return;
-        // }
-
-        // movie.casts.push(castId);
-        // await movie.save();
-
-        // return movie;
-
-        // Attach #2
+    attachCast(movieId, castId) {
         return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });
-    }
+    },
+    delete(movieId) {
+        return Movie.findByIdAndDelete(movieId);
+    } 
 }
