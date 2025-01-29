@@ -22,13 +22,16 @@
                 <li><a href="/about">About</a></li>
 
                 {{!-- Users --}}
+                {{#if user}}
                 <li><a href="/movies/create">Create Movie</a></li>
                 <li><a href="/casts/create">Create Cast</a></li>
                 <li><a href="/auth/logout">Logout</a></li>
-
+                <li>{{user.email}}</li>
+                {{else}}
                 {{!-- Guests --}}
                 <li><a href="/auth/login">Login</a></li>
                 <li><a href="/auth/register">Register</a></li>
+                {{/if}}
             </ul>
         </nav>
 
