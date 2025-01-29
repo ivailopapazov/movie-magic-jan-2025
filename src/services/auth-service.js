@@ -2,7 +2,7 @@ import User from "../models/User.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-const SECRET = 'zle34saqx2Km1o3Kgzels6uIhTfuRetIoSyXSJ6fvstgJc0bwxrrgExnJBm';
+const SECRET = process.env.JWT_SECRET || 'BASICSECRET';
 
 export default {
     register(userData) {
@@ -26,7 +26,7 @@ export default {
         };
         // TODO: use async option
         const token = jwt.sign(payload, SECRET, { expiresIn: '2h' });
-
+        
         return token
     }
 };
