@@ -1,7 +1,5 @@
-import { populate } from 'dotenv';
 import { Schema, model, Types } from 'mongoose';
 
-// Create schema
 const movieSchema = new Schema({
     title: {
         type: String,
@@ -45,7 +43,7 @@ const movieSchema = new Schema({
     },
     casts: [{
         type: Types.ObjectId,
-        ref: 'Cast'
+        ref: 'Cast',
     }],
     creator: {
         type: Types.ObjectId,
