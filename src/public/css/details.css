@@ -56,8 +56,7 @@
 .PG,
 .card-genre,
 .card-director,
-.card-year,
-.card-category {
+.card-year {
   color: rgb(223, 210, 210);
   padding: 8px;
   font-weight: bold;
