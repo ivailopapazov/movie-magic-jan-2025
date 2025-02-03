@@ -2,6 +2,7 @@ import { Router } from "express";
 import movieService from "../services/movie-service.js";
 import castService from "../services/cast-service.js";
 import { isAuth } from "../middlewares/auth-middleware.js";
+import { getErrorMessage } from "../utils/error-utils.js";
 
 const movieController = Router();
 
@@ -53,7 +54,9 @@ movieController.get('/:movieId/delete', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
 
     const movie = await movieService.getOne(movieId);
+    
     if (!movie.creator?.equals(req.user?.id)) {
+        res.setError('You are not the movie owner!')
         return res.redirect('/404');
     }
 
@@ -77,7 +80,13 @@ movieController.post('/:movieId/edit', isAuth, async (req, res) => {
 
     // TODO: check if creator
 
-    await movieService.update(movieId, movieData);
+    try {
+        await movieService.update(movieId, movieData);
+    } catch (err) {
+        const categories = getCategoriesViewData(movieData.category);
+
+        return res.render('movie/edit', { movie: movieData, categories, error: getErrorMessage(err) })
+    }
 
     res.redirect(`/movies/${movieId}/details`);
 });

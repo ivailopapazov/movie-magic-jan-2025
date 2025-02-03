@@ -35,6 +35,7 @@ export default {
             id: user.id,
             email: user.email,
         };
+        
         // TODO: use async option
         const token = jwt.sign(payload, SECRET, { expiresIn: '2h' });
         
